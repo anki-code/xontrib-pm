@@ -1,5 +1,5 @@
 <p align="center">
-Copy output to clipboard. Cross-platform.
+Persistent aliases for package managers.
 </p>
 
 <p align="center">  
@@ -11,33 +11,18 @@ If you like the idea click ⭐ on the repo and <a href="https://twitter.com/inte
 To install use pip:
 
 ```bash
-xpip install xontrib-clp
-# OR: xpip install -U git+https://github.com/anki-code/xontrib-clp
+xpip install xontrib-pm
+# OR: xpip install -U git+https://github.com/anki-code/xontrib-pm
 ```
 
 ## Usage
 
 ```xsh
-xontrib load clp
-echo hello | clp   # Copy "hello\n" to clipboard
-```
-
-## Use cases
-
-#### [pyperclip](https://pypi.org/project/pyperclip/)
-```xsh
-$XONTRIB_CLP_ALIAS = 'pyperclip'  # default
-xontrib load clp
-echo hello | clp   # Copy "hello\n" to clipboard using pyperclip
-```
-
-#### shutil
-```xsh
-$XONTRIB_CLP_ALIAS = 'shutil'  # default
-xontrib load clp
-echo hello | clp   # Copy "hello\n" to clipboard using platform-depending tool: pbcopy, xclip, etc
+xontrib load pm
+pm-search vim
 ```
 
 ## Credits
 
-This package was created with [xontrib template](https://github.com/xonsh/xontrib-template).
+* [Package manager-independent bash aliases](https://gist.github.com/rroblak/8137276)
+* This package was created with [xontrib template](https://github.com/xonsh/xontrib-template).
