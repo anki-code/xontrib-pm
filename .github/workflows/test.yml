@@ -29,5 +29,5 @@ jobs:
       run: pip install ".[dev]"
     - name: Run tests
       run: |
-        xonsh -c "xontrib load clp"
+        xonsh -c "xontrib load pm"
         pytest
