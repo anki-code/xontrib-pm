@@ -1,3 +1,5 @@
+"""Persistent aliases for package managers."""
+
 import shutil as _shutil
 
 if 'pm' in aliases:
