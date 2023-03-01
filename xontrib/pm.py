@@ -35,3 +35,10 @@ elif _shutil.which('yum'):
         'pm-uninstall': 'sudo yum uninstall',
         'pm-search': 'sudo yum search',
     }    
+
+elif _shutil.which('zap'):  # https://github.com/srevinsaju/zap
+    aliases |= {    
+        'pm': 'echo zap',
+        'pm-install': 'sudo zap install',
+        'pm-search': 'sudo zap search',
+    }    
