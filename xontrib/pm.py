@@ -7,7 +7,7 @@ if 'pm' in aliases:
 
 elif _shutil.which('pacman'):
     # Aliases from https://devhints.io/pacman
-    aliases['pm'] = 'sudo pacman'
+    aliases['pm'] = 'echo pacman'
     aliases['pm-install'] = 'sudo pacman -Sy'
     aliases['pm-uninstall'] = 'sudo pacman -Rsc'
     aliases['pm-search'] = 'sudo pacman -Ss'
@@ -17,7 +17,7 @@ elif _shutil.which('pacman'):
     aliases['pm-package-unneeded-uninstall'] = 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())'
 
 elif _shutil.which('apt'):
-    aliases['pm'] = 'sudo apt'
+    aliases['pm'] = 'echo apt'
     aliases['pm-install'] = 'sudo apt install'
     aliases['pm-uninstall'] = 'sudo apt uninstall'
     aliases['pm-search'] = 'sudo apt search'
