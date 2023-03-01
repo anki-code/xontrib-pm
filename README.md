@@ -21,6 +21,7 @@ xpip install xontrib-pm
 xontrib load pm
 pm
 # pacman
+
 # Type `pm-` and press Tab
 pm-search vim  # sudo pacman -Ss vim
 pm-install vim  # sudo pacman -Sy vim
