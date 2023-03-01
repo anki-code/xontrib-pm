@@ -7,17 +7,31 @@ if 'pm' in aliases:
 
 elif _shutil.which('pacman'):
     # Aliases from https://devhints.io/pacman
-    aliases['pm'] = 'echo pacman'
-    aliases['pm-install'] = 'sudo pacman -Sy'
-    aliases['pm-uninstall'] = 'sudo pacman -Rsc'
-    aliases['pm-search'] = 'sudo pacman -Ss'
-    aliases['pm-upgrade-everything'] = 'sudo pacman -Syu'
-    aliases['pm-package-info'] = 'sudo pacman -Qii'
-    aliases['pm-package-unneeded-list'] = 'sudo pacman -Qdt'
-    aliases['pm-package-unneeded-uninstall'] = 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())'
-
+    aliases |= {
+        'pm': 'echo pacman',
+        'pm-install': 'sudo pacman -Sy',
+        'pm-uninstall': 'sudo pacman -Rsc',
+        'pm-search': 'sudo pacman -Ss',
+        'pm-upgrade-everything': 'sudo pacman -Syu',
+        'pm-package-info': 'sudo pacman -Qii',
+        'pm-package-unneeded-list': 'sudo pacman -Qdt',
+        'pm-package-unneeded-uninstall': 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())',
+    }
+    
 elif _shutil.which('apt'):
-    aliases['pm'] = 'echo apt'
-    aliases['pm-install'] = 'sudo apt install'
-    aliases['pm-uninstall'] = 'sudo apt uninstall'
-    aliases['pm-search'] = 'sudo apt search'
+    aliases |= {    
+        'pm': 'echo apt',
+        'pm-install': 'sudo apt install',
+        'pm-instally': 'sudo apt install -y',
+        'pm-uninstall': 'sudo apt uninstall',
+        'pm-search': 'sudo apt search',
+    }
+
+elif _shutil.which('yum'):
+    aliases |= {    
+        'pm': 'echo yum',
+        'pm-install': 'sudo yum install',
+        'pm-instally': 'sudo yum install -y',
+        'pm-uninstall': 'sudo yum uninstall',
+        'pm-search': 'sudo yum search',
+    }    
