@@ -19,8 +19,8 @@ xpip install xontrib-pm
 
 ```xsh
 xontrib load pm
-aliases['pm']
-# ['sudo', 'pacman']
+pm
+# pacman
 pm-search vim  # sudo pacman -Ss vim
 pm-install vim  # sudo pacman -Sy vim
 ```
