@@ -1,53 +1,46 @@
 """Persistent aliases for package managers."""
 
-import shutil as _shutil
+from shutil import which as _which
 
 _pm = {
     'brew': {
-        'pm': 'echo brew',
-        'pm-install': 'brew install',
-        'pm-uninstall': 'brew uninstall',
-        'pm-search': 'brew search',
+        'install': 'brew install',
+        'uninstall': 'brew uninstall',
+        'search': 'brew search',
     },
     'pacman': { # Aliases from https://devhints.io/pacman
-        'pm': 'echo pacman',
-        'pm-install': 'sudo pacman -Sy',
-        'pm-uninstall': 'sudo pacman -Rsc',
-        'pm-search': 'sudo pacman -Ss',
-        'pm-upgrade-everything': 'sudo pacman -Syu',
-        'pm-package-info': 'sudo pacman -Qii',
-        'pm-package-unneeded-list': 'sudo pacman -Qdt',
-        'pm-package-unneeded-uninstall': 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())',
+        'install': 'sudo pacman -Sy',
+        'uninstall': 'sudo pacman -Rsc',
+        'search': 'sudo pacman -Ss',
+        'upgrade-everything': 'sudo pacman -Syu',
+        'package-info': 'sudo pacman -Qii',
+        'package-unneeded-list': 'sudo pacman -Qdt',
+        'package-unneeded-uninstall': 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())',
     },
     'apt': {    
-        'pm': 'echo apt',
-        'pm-install': 'sudo apt install',
-        'pm-instally': 'sudo apt install -y',
-        'pm-uninstall': 'sudo apt uninstall',
-        'pm-search': 'sudo apt search',
+        'install': 'sudo apt install',
+        'instally': 'sudo apt install -y',
+        'uninstall': 'sudo apt uninstall',
+        'search': 'sudo apt search',
     },
     'yum': {    
-        'pm': 'echo yum',
-        'pm-install': 'sudo yum install',
-        'pm-instally': 'sudo yum install -y',
-        'pm-uninstall': 'sudo yum uninstall',
-        'pm-search': 'sudo yum search',
+        'install': 'sudo yum install',
+        'instally': 'sudo yum install -y',
+        'uninstall': 'sudo yum uninstall',
+        'search': 'sudo yum search',
     },
     'zap': { # https://github.com/srevinsaju/zap
-        'pm': 'echo zap',
-        'pm-install': 'sudo zap install',
-        'pm-search': 'sudo zap search',
+        'install': 'sudo zap install',
+        'search': 'sudo zap search',
     }
 }
 
 
-def _get_default_pm():
-    for pm in _pm.keys():
-        if _shutil.which(pm):
-            return pm
-    return None
+_found_pm = []
+for p in _pm.keys():
+    if _which(p):
+        _found_pm.append(p)
+        aliases |= {p + '-' + alias : value for alias, value in _pm[p].items()} 
 
-_XONTRIB_PM = __xonsh__.env.get('XONTRIB_PM', _get_default_pm())
-
-if _XONTRIB_PM:
-    aliases |= _pm[_XONTRIB_PM]
+aliases['pm'] = f"echo {', '.join(_found_pm)}"
+    
