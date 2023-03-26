@@ -39,7 +39,7 @@ The list of commands that need to have the package manager aliases i.e. `<packag
 * `uninstall` - uninstall the package
 
 Optinally:
-* `instally` - install without user confirmation
+* `instally` (install and say yes) - install without user confirmation
 * `installed` - list of installed packages
 * Any other useful aliases e.g. `pacman-upgrade-everything`.
 
