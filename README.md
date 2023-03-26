@@ -33,7 +33,7 @@ Feel free to extand the list of known package managers.
 
 ## Commands
 
-The list of commands that need to have the package manager:
+The list of commands that need to have the package manager aliases i.e. `<package_manager>-<command>`:
 * `search` - serach the package
 * `install` - install the package
 * `uninstall` - uninstall the package
