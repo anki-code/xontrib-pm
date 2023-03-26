@@ -17,14 +17,16 @@ xpip install xontrib-pm
 
 ## Usage
 
+After loading xontrib-pm is searching the known package managers. If the package manager installed (e.g. `pacman`) the xontrib adds the aliases e.g. `pacman-install`, `pacman-search`, etc. The `pm` command returns the list of known installed package managers.
+
 ```xsh
 xontrib load pm
 pm
-# pacman
+# pacman, brew
 
-# Type `pm-` and press Tab
-pm-search vim  # sudo pacman -Ss vim
-pm-install vim  # sudo pacman -Sy vim
+# Type `pacman-` and press Tab
+pacman-search vim  # sudo pacman -Ss vim
+pacman-install vim  # sudo pacman -Sy vim
 ```
 
 ## Credits
