@@ -41,6 +41,7 @@ The list of commands that need to have the package manager:
 Optinally:
 * `instally` - install without user confirmation
 * `installed` - list of installed packages
+* Any other useful aliases e.g. `pacman-upgrade-everything`.
 
 ## Credits
 
