@@ -34,9 +34,9 @@ Feel free to extand the list of known package managers.
 ## Commands
 
 The list of commands that need to have the package manager:
-* `search`
-* `install`
-* `uninstall`
+* `search` - serach the package
+* `install` - install the package
+* `uninstall` - uninstall the package
 
 Optinally:
 * `instally` - install without user confirmation
