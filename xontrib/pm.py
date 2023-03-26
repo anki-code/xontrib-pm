@@ -3,6 +3,12 @@
 from shutil import which as _which
 
 _pm = {
+    'apt': {    
+        'install': 'sudo apt install',
+        'instally': 'sudo apt install -y',
+        'uninstall': 'sudo apt uninstall',
+        'search': 'sudo apt search',
+    },    
     'brew': {
         'install': 'brew install',
         'uninstall': 'brew uninstall',
@@ -17,11 +23,10 @@ _pm = {
         'package-unneeded-list': 'sudo pacman -Qdt',
         'package-unneeded-uninstall': 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())',
     },
-    'apt': {    
-        'install': 'sudo apt install',
-        'instally': 'sudo apt install -y',
-        'uninstall': 'sudo apt uninstall',
-        'search': 'sudo apt search',
+    'port': {  # https://www.macports.org/
+        'install': 'port install',
+        'uninstall': 'port uninstall',
+        'installed': 'port installed',
     },
     'yum': {    
         'install': 'sudo yum install',
