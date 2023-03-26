@@ -40,7 +40,7 @@ The list of commands that need to have the package manager:
 
 Optinally:
 * `instally` - install without user confirmation
-* `list` - list of all packages
+* `installed` - list of installed packages
 
 ## Credits
 
