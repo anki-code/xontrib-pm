@@ -29,6 +29,19 @@ pacman-search vim  # sudo pacman -Ss vim
 pacman-install vim  # sudo pacman -Sy vim
 ```
 
+Feel free to extand the list of known package managers.
+
+## Commands
+
+The list of commands that need to have the package manager:
+* `search`
+* `install`
+* `uninstall`
+
+Optinally:
+* `instally` - install without user confirmation
+* `list` - list of all packages
+
 ## Credits
 
 * [Package manager-independent bash aliases](https://gist.github.com/rroblak/8137276)
