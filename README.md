@@ -25,8 +25,8 @@ pm
 # pacman, brew
 
 # Type `pacman-` and press Tab
-pacman-search vim  # sudo pacman -Ss vim
-pacman-install vim  # sudo pacman -Sy vim
+pacman-search vim    # sudo pacman -Ss vim
+pacman-install vim   # sudo pacman -Sy vim
 ```
 
 Feel free to extand the list of known package managers.
