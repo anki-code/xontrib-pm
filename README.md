@@ -31,6 +31,10 @@ pacman-install vim   # sudo pacman -Sy vim
 
 Feel free to extand the list of known package managers.
 
+## Supported package managers
+
+Supported package managers: apt, brew, pacman, port, yum, zap. Feel free to add more, PR is welcome!
+
 ## Commands
 
 The list of commands that need to have the package manager aliases i.e. `<package_manager>-<command>`:
