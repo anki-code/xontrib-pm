@@ -33,7 +33,7 @@ Feel free to extand the list of known package managers.
 
 ## Supported package managers
 
-Supported package managers: apt, brew, pacman, port, yum, zap. Feel free to add more, PR is welcome!
+Supported package managers: `apt`, `brew`, `pacman`, `port`, `yum`, `zap`. Feel free to add more, PR is welcome!
 
 ## Commands
 
