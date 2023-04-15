@@ -37,7 +37,14 @@ _pm = {
     'zap': { # https://github.com/srevinsaju/zap
         'install': 'sudo zap install',
         'search': 'sudo zap search',
-    }
+    },
+    'guix': {
+        'install': 'guix install',
+        'uninstall': 'guix remove',
+        'search': 'guix search',
+        'upgrade-everything': 'guix upgrade',
+        'package-info': 'guix show',
+    },
 }
 
 
