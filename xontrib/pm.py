@@ -14,6 +14,18 @@ _pm = {
         'uninstall': 'brew uninstall',
         'search': 'brew search',
     },
+    'conda': {
+        'install': 'conda install',
+        'uninstall': 'conda uninstall',        
+    },
+    'mamba': {
+        'install': 'conda install',
+        'uninstall': 'conda uninstall',        
+    },
+    'pip': {
+        'install': 'pip install',
+        'instally': 'pip install -y'
+    },
     'pacman': { # Aliases from https://devhints.io/pacman
         'install': 'sudo pacman -Sy',
         'uninstall': 'sudo pacman -Rsc',
