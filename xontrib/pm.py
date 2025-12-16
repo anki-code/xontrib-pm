@@ -22,9 +22,16 @@ _pm = {
         'install': 'conda install',
         'uninstall': 'conda uninstall',        
     },
+    'xpip': {
+        'install': 'xpip install',
+        'instally': 'xpip install -y',
+        'instally-force': 'xpip install -y --force-reinstall',
+        'uninstall': 'xpip uninstall',
+    },    
     'pip': {
         'install': 'pip install',
         'instally': 'pip install -y',
+        'instally-force': 'pip install -y --force-reinstall',
         'uninstall': 'pip uninstall',
     },
     'pacman': { # Aliases from https://devhints.io/pacman
