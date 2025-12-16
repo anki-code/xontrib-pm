@@ -24,7 +24,8 @@ _pm = {
     },
     'pip': {
         'install': 'pip install',
-        'instally': 'pip install -y'
+        'instally': 'pip install -y',
+        'uninstall': 'pip uninstall',
     },
     'pacman': { # Aliases from https://devhints.io/pacman
         'install': 'sudo pacman -Sy',
