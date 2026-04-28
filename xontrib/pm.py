@@ -43,6 +43,11 @@ _pm = {
         'package-unneeded-list': 'sudo pacman -Qdt',
         'package-unneeded-uninstall': 'sudo pacman -Rns @($(pacman -Qdtq).splitlines())',
     },
+    'pkg': { # FreeBSD
+        'install': 'sudo pkg install',
+        'instally': 'sudo pkg install -y',
+        'uninstall': 'sudo pkg uninstall',
+    },        
     'port': {  # https://www.macports.org/
         'install': 'port install',
         'uninstall': 'port uninstall',
